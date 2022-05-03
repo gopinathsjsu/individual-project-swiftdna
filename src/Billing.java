@@ -18,6 +18,13 @@ public class Billing {
             inventoryProcessor.saveInventories();
             System.out.println("Inventories saved successfully!");
 
+            // System.out.println("Enter the path for the Cards data: ");
+            // String cardDetailsFilePath = userInput.nextLine();
+            String cardDetailsFilePath = "/Users/prashanth/workspace/blackpanther/202/BillingProject/resources/card_details.csv";
+            CardDetailsProcessor cardDetailsProcessor = new CardDetailsProcessor(cardDetailsFilePath);
+            cardDetailsProcessor.saveCardDetails();
+            System.out.println("Card Details saved successfully!");
+
         } catch (Exception e) {
             System.out.println(e);
         }
