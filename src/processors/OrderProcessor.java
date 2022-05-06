@@ -28,7 +28,7 @@ public class OrderProcessor extends FileHandler {
         HashMap<String, Integer> capTracker = new HashMap<String, Integer>();
         for (String line : fileContent) {
             ArrayList<String> currentItemList = new ArrayList<String>();
-			String[] item = line.split(",");
+            String[] item = line.split(",");
             // Item - item[0] && Qty - item[1]
             String itemName = item[0];
             String stockQty = idb.getQuantities().get(item[0]);
@@ -67,7 +67,7 @@ public class OrderProcessor extends FileHandler {
                 cardNumber = item[2];
             }
             this.orderDetails.add(currentItemList);
-		}
+        }
         if (!idb.getCardDetails().contains(cardNumber)) {
             idb.getCardDetails().add(cardNumber);
         }

@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import processors.CardDetailsProcessor;
 import processors.InventoryProcessor;
 import storage.InternalDatabase;
 
