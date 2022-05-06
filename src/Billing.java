@@ -9,18 +9,16 @@ public class Billing {
             InternalDatabase idb = InternalDatabase.getInstance();
             idb.loadConfigs();
 
-            // Scanner userInput = new Scanner(System.in);
+            Scanner userInput = new Scanner(System.in);
             // Get the user input file path for stock inventory
-			// System.out.println("Enter the path for the Stock data: ");
-            // String inventoryFilePath = userInput.nextLine();
-            String inventoryFilePath = "/Users/prashanth/workspace/blackpanther/202/BillingProject/resources/inventory_items.csv";
+			System.out.println("Enter the path for the Stock data: ");
+            String inventoryFilePath = userInput.nextLine();
             InventoryProcessor inventoryProcessor = new InventoryProcessor(inventoryFilePath);
             inventoryProcessor.saveInventories();
             System.out.println("Inventories saved successfully!");
 
-            // System.out.println("Enter the path for the Cards data: ");
-            // String cardDetailsFilePath = userInput.nextLine();
-            String cardDetailsFilePath = "/Users/prashanth/workspace/blackpanther/202/BillingProject/resources/card_details.csv";
+            System.out.println("Enter the path for the Cards data: ");
+            String cardDetailsFilePath = userInput.nextLine();
             CardDetailsProcessor cardDetailsProcessor = new CardDetailsProcessor(cardDetailsFilePath);
             cardDetailsProcessor.saveCardDetails();
             System.out.println("Card Details saved successfully!");
